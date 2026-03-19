@@ -37,7 +37,7 @@ except ImportError:
 REPO_DIR = Path(__file__).resolve().parent
 
 ZED_CONFIG_PATHS: dict[str, Path] = {
-    "Darwin": Path.home() / "Library" / "Application Support" / "Zed",
+    "Darwin": Path.home() / ".config" / "zed",
     "Windows": Path(os.environ.get("APPDATA", "")) / "Zed",
 }
 
