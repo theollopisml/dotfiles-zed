@@ -1,0 +1,149 @@
+[
+  // ═══════════════════════════════════════════════════════════
+  // Keybindings communs — fichier unique multi-OS
+  //
+  // Windows : ctrl  |  macOS : cmd
+  // Les deux claviers sont AZERTY francais
+  // ═══════════════════════════════════════════════════════════
+
+  // ─── Focus terminal <-> editeur ────────────────────────────
+  // Windows
+  {
+    "context": "os == windows && Workspace && !Terminal",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == windows && Terminal",
+    "bindings": {
+      "ctrl-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+  // macOS
+  {
+    "context": "os == macos && Workspace && !Terminal",
+    "bindings": {
+      "cmd-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == macos && Terminal",
+    "bindings": {
+      "cmd-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+
+  // ─── Rename symbol ─────────────────────────────────────────
+  // Windows
+  {
+    "context": "os == windows && Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-r": "editor::Rename"
+    }
+  },
+  // macOS
+  {
+    "context": "os == macos && Editor && mode == full",
+    "bindings": {
+      "cmd-shift-r": "editor::Rename"
+    }
+  },
+
+  // ─── Go to matching bracket (AZERTY-friendly) ─────────────
+  // Windows
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "ctrl-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+  // macOS
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "cmd-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+
+  // ─── F12 variants — harmonisation multi-OS ─────────────────
+  // Defaults conserves : F12=GoToDefinition, Alt+F12=GoToDefinitionSplit
+  // Windows defaults  : Ctrl+F12=GoToImplementation, Shift+Alt+F12=FindAllReferences
+  // macOS defaults     : Cmd+F12=GoToTypeDefinition, Shift+Alt+F12=FindAllReferences
+  //
+  // Custom ci-dessous (symetrique sur les 2 OS) :
+  // - Shift+F12       = FindAllReferences    (style VS Code)
+  // - Ctrl+F12        = GoToImplementation
+  // - Ctrl+Shift+F12  = GoToTypeDefinition
+  // - Alt+Ctrl+F12    = GoToDeclaration
+
+  // Windows
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+  // macOS
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+
+  // ─── Navigation multibuffer (Find All References, diagnostics, etc.) ────────
+  // macOS : cmd-up/cmd-down sont deja lies par defaut
+  // Windows : aucun binding par defaut — on ajoute ctrl-up/down
+  // Le contexte "Editor && multibuffer" est plus specifique qu'"Editor" seul
+  // et prend priorite sur les bindings LineUp/LineDown du contexte general
+  {
+    "context": "os == windows && Editor && multibuffer",
+    "bindings": {
+      "ctrl-up": "editor::MoveToStartOfExcerpt",
+      "ctrl-down": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-shift-up": "editor::SelectToStartOfExcerpt",
+      "ctrl-shift-down": "editor::SelectToStartOfNextExcerpt"
+    }
+  },
+
+  // ─── Focus pane gauche/droite (raccourci simplifie) ────────
+  // Override les bindings Sublime Text (subword navigation) dans Editor
+  // pour naviguer entre panes directement
+  // Windows
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == windows && Workspace",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  // macOS
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == macos && Workspace",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  }
+]

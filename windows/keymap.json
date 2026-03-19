@@ -1,0 +1,58 @@
+[
+  {
+    "context": "Workspace && !Terminal",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-r": "editor::Rename"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+  {
+    "context": "Editor && multibuffer",
+    "bindings": {
+      "ctrl-up": "editor::MoveToStartOfExcerpt",
+      "ctrl-down": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-shift-up": "editor::SelectToStartOfExcerpt",
+      "ctrl-shift-down": "editor::SelectToStartOfNextExcerpt"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  }
+]

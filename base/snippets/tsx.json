@@ -1,0 +1,29 @@
+{
+  "React FC": {
+    "prefix": "zrfc",
+    "body": [
+      "export function ${1:Component}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}"
+    ],
+    "description": "React functional component"
+  },
+  "useState": {
+    "prefix": "zus",
+    "body": ["const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialValue})$0"],
+    "description": "useState hook"
+  },
+  "useEffect": {
+    "prefix": "zue",
+    "body": [
+      "useEffect(() => {",
+      "\t$0",
+      "}, [${1}])"
+    ],
+    "description": "useEffect hook"
+  }
+}

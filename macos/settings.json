@@ -1,0 +1,243 @@
+// Zed settings — macOS
+//
+// Fichier complet pour macOS. Copier directement vers :
+//   ~/Library/Application Support/Zed/settings.json
+//
+// Ou deployer via : uv run install.py
+{
+    // ─── MCP Servers ───────────────────────────────────────────
+    "context_servers": {
+        "mcp-server-github": {
+            "enabled": true,
+            "remote": false,
+            "settings": {}
+        },
+        "mcp-server-brave-search": {
+            "enabled": true,
+            "remote": false,
+            "settings": {
+                "brave_api_key": "BSAuGXTZsX9NRZX0OkP65APrnK6_4vI"
+            }
+        }
+    },
+
+    // ─── Custom LLM Providers ─────────────────────────────────
+    "language_models": {
+        "openai_compatible": {
+            "Z.ai": {
+                "api_url": "https://api.z.ai/api/coding/paas/v4",
+                "available_models": [
+                    {
+                        "name": "glm-4.5",
+                        "display_name": null,
+                        "max_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false
+                        }
+                    }
+                ]
+            }
+        }
+    },
+
+    // ─── AI Agent ──────────────────────────────────────────────
+    "agent": {
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "grok-code-fast-1",
+            "enable_thinking": false
+        },
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-5-mini",
+            "enable_thinking": false
+        },
+        "favorite_models": [],
+        "model_parameters": [],
+        "use_modifier_to_send": false,
+        "play_sound_when_agent_done": true,
+        "tool_permissions": {
+            "default": "allow"
+        }
+    },
+
+    "agent_servers": {
+        "claude-acp": {
+            "default_config_options": {
+                "model": "sonnet"
+            },
+            "type": "registry"
+        }
+    },
+
+    // ─── Edit Predictions ─────────────────────────────────────
+    "edit_predictions": {
+        "disabled_globs": ["*.env"],
+        "provider": "copilot",
+        "mode": "subtle"
+    },
+
+    // ─── Appearance ────────────────────────────────────────────
+    "icon_theme": {
+        "mode": "system",
+        "dark": "Material Icon Theme",
+        "light": "Material Icon Theme"
+    },
+
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Ayu Mirage"
+    },
+
+    "base_keymap": "VSCode",
+    "cursor_shape": "bar",
+    "ui_font_size": 16,
+    "buffer_font_size": 15,
+    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "buffer_font_features": {
+        "calt": true
+    },
+
+    // macOS : fallback polices systeme
+    "buffer_font_fallbacks": ["Menlo", "SF Mono", "monospace"],
+
+    // ─── Tabs ──────────────────────────────────────────────────
+    "tabs": {
+        "show_diagnostics": "errors",
+        "file_icons": true,
+        "git_status": true
+    },
+
+    "tab_bar": {
+        "show": true,
+        "show_nav_history_buttons": false
+    },
+
+    "max_tabs": 6,
+
+    // ─── Editor ────────────────────────────────────────────────
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+    },
+
+    "format_on_save": "on",
+    "autosave": "on_focus_change",
+
+    // ─── Inline Diagnostics (Error Lens style) ────────────────
+    "diagnostics": {
+        "include_warnings": true,
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        }
+    },
+
+    // ─── Languages ─────────────────────────────────────────────
+    "languages": {
+        "Python": {
+            "language_servers": ["basedpyright", "ruff"],
+            "format_on_save": "on",
+            "code_actions_on_format": {
+                "source.organizeImports.ruff": true,
+                "source.fixAll.ruff": true
+            },
+            "formatter": {
+                "language_server": {
+                    "name": "ruff"
+                }
+            }
+        }
+    },
+
+    // ─── LSP Configuration ────────────────────────────────────
+    "lsp": {
+        "basedpyright": {
+            "settings": {
+                "basedpyright.analysis": {
+                    "diagnosticMode": "workspace"
+                }
+            }
+        }
+    },
+
+    // ─── File Exclusions ──────────────────────────────────────
+    "file_scan_exclusions": [
+        // Defaults
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/.jj",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings",
+        // Python-specific
+        "**/__pycache__",
+        "**/.mypy_cache",
+        "**/.ruff_cache",
+        "**/.pytest_cache",
+        "**/*.egg-info",
+        "**/.venv",
+        // General
+        "**/out",
+        "**/dist",
+        "**/.husky",
+        "**/.turbo",
+        "**/.vscode-test",
+        "**/.vscode",
+        "**/.next",
+        "**/node_modules"
+    ],
+
+    // ─── Panels ────────────────────────────────────────────────
+    "project_panel": {
+        "button": true,
+        "dock": "left",
+        "git_status": true,
+        "indent_size": 16
+    },
+
+    "collaboration_panel": {
+        "dock": "right",
+        "button": false
+    },
+
+    "outline_panel": {
+        "dock": "left"
+    },
+
+    "git_panel": {
+        "tree_view": true
+    },
+
+    // ─── Telemetry ─────────────────────────────────────────────
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+
+    // ─── Session ───────────────────────────────────────────────
+    "session": {
+        "trust_all_worktrees": true
+    },
+
+    // ─── Terminal ──────────────────────────────────────────────
+    // shell par defaut sur macOS : zsh (pas besoin de le specifier)
+    "terminal": {
+        "font_size": 14.0,
+        "font_family": "JetBrainsMono Nerd Font",
+        "dock": "right",
+        "line_height": "standard"
+    }
+}

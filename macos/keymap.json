@@ -1,0 +1,49 @@
+[
+  {
+    "context": "Workspace && !Terminal",
+    "bindings": {
+      "cmd-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-shift-r": "editor::Rename"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  }
+]

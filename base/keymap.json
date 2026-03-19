@@ -1,0 +1,105 @@
+[
+  {
+    "context": "os == windows && Workspace && !Terminal",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == windows && Terminal",
+    "bindings": {
+      "ctrl-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "os == macos && Workspace && !Terminal",
+    "bindings": {
+      "cmd-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == macos && Terminal",
+    "bindings": {
+      "cmd-alt-t": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "os == windows && Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-r": "editor::Rename"
+    }
+  },
+  {
+    "context": "os == macos && Editor && mode == full",
+    "bindings": {
+      "cmd-shift-r": "editor::Rename"
+    }
+  },
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "ctrl-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "cmd-shift->": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-f12": "editor::GoToImplementation",
+      "ctrl-shift-f12": "editor::GoToTypeDefinition",
+      "alt-ctrl-f12": "editor::GoToDeclaration"
+    }
+  },
+  {
+    "context": "os == windows && Editor && multibuffer",
+    "bindings": {
+      "ctrl-up": "editor::MoveToStartOfExcerpt",
+      "ctrl-down": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-shift-up": "editor::SelectToStartOfExcerpt",
+      "ctrl-shift-down": "editor::SelectToStartOfNextExcerpt"
+    }
+  },
+  {
+    "context": "os == windows && Editor",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == windows && Workspace",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == macos && Editor",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == macos && Workspace",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  }
+]
