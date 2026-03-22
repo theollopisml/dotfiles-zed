@@ -67,5 +67,51 @@
       "ctrl-alt-left": "workspace::ActivatePaneLeft",
       "ctrl-alt-right": "workspace::ActivatePaneRight"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-alt-up": "pane::ActivatePreviousItem",
+      "ctrl-alt-down": "pane::ActivateNextItem",
+      "ctrl-alt-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-1": [
+        "pane::ActivateItem",
+        0
+      ],
+      "alt-2": [
+        "pane::ActivateItem",
+        1
+      ],
+      "alt-3": [
+        "pane::ActivateItem",
+        2
+      ],
+      "alt-4": [
+        "pane::ActivateItem",
+        3
+      ],
+      "alt-5": [
+        "pane::ActivateItem",
+        4
+      ],
+      "alt-6": [
+        "pane::ActivateItem",
+        5
+      ],
+      "alt-7": [
+        "pane::ActivateItem",
+        6
+      ],
+      "alt-8": [
+        "pane::ActivateItem",
+        7
+      ],
+      "alt-9": "pane::ActivateLastItem"
+    }
   }
 ]

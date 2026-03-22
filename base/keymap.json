@@ -127,5 +127,97 @@
       "cmd-alt-left": "workspace::ActivatePaneLeft",
       "cmd-alt-right": "workspace::ActivatePaneRight"
     }
+  },
+  {
+    "context": "os == windows && Terminal",
+    "bindings": {
+      "ctrl-alt-up": "pane::ActivatePreviousItem",
+      "ctrl-alt-down": "pane::ActivateNextItem",
+      "ctrl-alt-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "os == macos && Terminal",
+    "bindings": {
+      "cmd-alt-up": "pane::ActivatePreviousItem",
+      "cmd-alt-down": "pane::ActivateNextItem",
+      "cmd-alt-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "os == windows && Pane",
+    "bindings": {
+      "alt-1": [
+        "pane::ActivateItem",
+        0
+      ],
+      "alt-2": [
+        "pane::ActivateItem",
+        1
+      ],
+      "alt-3": [
+        "pane::ActivateItem",
+        2
+      ],
+      "alt-4": [
+        "pane::ActivateItem",
+        3
+      ],
+      "alt-5": [
+        "pane::ActivateItem",
+        4
+      ],
+      "alt-6": [
+        "pane::ActivateItem",
+        5
+      ],
+      "alt-7": [
+        "pane::ActivateItem",
+        6
+      ],
+      "alt-8": [
+        "pane::ActivateItem",
+        7
+      ],
+      "alt-9": "pane::ActivateLastItem"
+    }
+  },
+  {
+    "context": "os == macos && Pane",
+    "bindings": {
+      "ctrl-1": [
+        "pane::ActivateItem",
+        0
+      ],
+      "ctrl-2": [
+        "pane::ActivateItem",
+        1
+      ],
+      "ctrl-3": [
+        "pane::ActivateItem",
+        2
+      ],
+      "ctrl-4": [
+        "pane::ActivateItem",
+        3
+      ],
+      "ctrl-5": [
+        "pane::ActivateItem",
+        4
+      ],
+      "ctrl-6": [
+        "pane::ActivateItem",
+        5
+      ],
+      "ctrl-7": [
+        "pane::ActivateItem",
+        6
+      ],
+      "ctrl-8": [
+        "pane::ActivateItem",
+        7
+      ],
+      "ctrl-9": "pane::ActivateLastItem"
+    }
   }
 ]
