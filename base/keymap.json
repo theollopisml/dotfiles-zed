@@ -1,6 +1,12 @@
 [
   {
-    "context": "os == windows && Workspace && !Terminal",
+    "context": "os == windows && Workspace",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == windows && Editor",
     "bindings": {
       "ctrl-alt-t": "terminal_panel::ToggleFocus"
     }
@@ -8,11 +14,17 @@
   {
     "context": "os == windows && Terminal",
     "bindings": {
-      "ctrl-alt-t": "workspace::ActivatePaneLeft"
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
     }
   },
   {
-    "context": "os == macos && Workspace && !Terminal",
+    "context": "os == macos && Workspace",
+    "bindings": {
+      "cmd-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "os == macos && Editor",
     "bindings": {
       "cmd-alt-t": "terminal_panel::ToggleFocus"
     }
@@ -20,7 +32,7 @@
   {
     "context": "os == macos && Terminal",
     "bindings": {
-      "cmd-alt-t": "workspace::ActivatePaneLeft"
+      "cmd-alt-t": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -89,6 +101,13 @@
     }
   },
   {
+    "context": "os == windows && Terminal",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
     "context": "os == macos && Editor",
     "bindings": {
       "cmd-alt-left": "workspace::ActivatePaneLeft",
@@ -97,6 +116,13 @@
   },
   {
     "context": "os == macos && Workspace",
+    "bindings": {
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "os == macos && Terminal",
     "bindings": {
       "cmd-alt-left": "workspace::ActivatePaneLeft",
       "cmd-alt-right": "workspace::ActivatePaneRight"

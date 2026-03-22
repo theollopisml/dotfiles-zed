@@ -1,6 +1,12 @@
 [
   {
-    "context": "Workspace && !Terminal",
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
     "bindings": {
       "ctrl-alt-t": "terminal_panel::ToggleFocus"
     }
@@ -8,7 +14,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-alt-t": "workspace::ActivatePaneLeft"
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -50,6 +56,13 @@
   },
   {
     "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-left": "workspace::ActivatePaneLeft",
+      "ctrl-alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Terminal",
     "bindings": {
       "ctrl-alt-left": "workspace::ActivatePaneLeft",
       "ctrl-alt-right": "workspace::ActivatePaneRight"
